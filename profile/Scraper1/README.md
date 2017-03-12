@@ -4,13 +4,13 @@ This scraper starts with a youtube video, prints it's stats and then chooses a v
 
 
 
-To generate `stats_python.prof` : `python -m cProfile -o stats_python.prof youtube.py`
+* To generate `stats_python.prof` : `python -m cProfile -o stats_python.prof youtube.py`
 
-To generate `stats_python.txt` : `python -m cProfile -s cumtime youtube.py >> stats_python.txt`
+* To generate `stats_python.txt` : `python -m cProfile -s cumtime youtube.py >> stats_python.txt`
 
-To generate `stats_scrapy.prof` : `scrapy runspider youtube.py --profile stats_scrapy.prof`
+* To generate `stats_scrapy.prof` : `scrapy runspider youtube.py --profile stats_scrapy.prof`
 
-To view the visualisation, `snakeviz` can be used.
+* To view the visualisation, `snakeviz` can be used.
 
 Perform the following to view the visualisations :
 
