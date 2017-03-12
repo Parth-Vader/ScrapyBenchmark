@@ -16,7 +16,8 @@ This scraper just takes a youtube link and prints out it's stats.
  
  * `snakeviz stats_scrapy.prof`
  
- * Snakeviz results
+
+* Snakeviz results
 
 Shows the relative cumulative time usage by each function
 
