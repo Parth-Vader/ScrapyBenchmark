@@ -10,4 +10,12 @@ To generate `stats_python.txt` : `python -m cProfile -s cumtime youtube.py >> st
 
 To generate `stats_scrapy.prof` : `scrapy runspider youtube.py --profile stats_scrapy.prof`
 
-To view the visualisation, do `snakeviz stats_python.prof` or `snakeviz stats_scrapy.prof`
+To view the visualisation, `snakeviz` can be used.
+
+Perform the following to view the visualisations :
+
+ `pip install snakeviz`
+  
+ `snakeviz stats_python.prof`
+ 
+ `snakeviz stats_scrapy.prof`
