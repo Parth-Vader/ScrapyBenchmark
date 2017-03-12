@@ -12,8 +12,8 @@ This scraper starts with a youtube video, prints it's stats and then chooses a v
 
 * To view the visualisation, `snakeviz` can be used.
 
-		 * `pip install snakeviz`
-		
-		 * `snakeviz stats_python.prof`
-		 
-		 * `snakeviz stats_scrapy.prof`
+ * `pip install snakeviz`
+
+ * `snakeviz stats_python.prof`
+ 
+ * `snakeviz stats_scrapy.prof`
