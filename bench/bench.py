@@ -47,6 +47,13 @@ class _BenchSpider(scrapy.Spider):
     total = 10000
     show = 20
     baseurl = 'http://localhost:8998'
+    '''DOWNLOADER_MIDDLEWARES = {
+    'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware': 10.3.100.207:8080,
+    }'''
+    #request = Request(url="http://localhost:8998")
+    #request.meta['proxy'] = "10.3.100.207:8080"
+    #yield request
+    
     link_extractor = LinkExtractor()
 
     def start_requests(self):
@@ -56,4 +63,5 @@ class _BenchSpider(scrapy.Spider):
 
     def parse(self, response):
         for link in self.link_extractor.extract_links(response):
+            scrapy.request.meta['proxy'] = "10.3.100.207:8080"
             yield scrapy.Request(link.url, callback=self.parse)
