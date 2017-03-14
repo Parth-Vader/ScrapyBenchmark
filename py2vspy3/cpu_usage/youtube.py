@@ -24,6 +24,7 @@ class YoutubeSpider(scrapy.Spider):
         'DEPTH_LIMIT': '100',
 	}
 #selectors
+	#@profile
 	def parse(self, response):
 		SET_SELECTOR = '#page-container'
 		#NEW_SELECTOR = '#watch-header'
