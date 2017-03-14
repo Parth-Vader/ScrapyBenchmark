@@ -1,6 +1,6 @@
 # Python 2 vs Python 3 performance
 
-When `scrapy bench` was run with `python2.7` and `python3`, there was some difference in the speed.
+### When `scrapy bench` was run with `python2.7` and `python3`, there was some difference in the speed.
 
 * Stats for `python 2.7`
 
@@ -32,3 +32,60 @@ When `scrapy bench` was run with `python2.7` and `python3`, there was some diffe
 		2017-03-14 14:25:26 [scrapy.core.engine] INFO: Closing spider (closespider_timeout)
 		2017-03-14 14:25:26 [scrapy.extensions.logstats] INFO: Crawled 763 pages (at 3900 pages/min), scraped 0 items (at 0 items/min)
 
+
+### Furthermore, when a simple spider `youtube.py` is run with `python2` and `python3`, there are time differences.
+
+
+* `python 2.7` : 
+
+		'downloader/request_bytes': 3652,
+		'downloader/request_count': 10,
+		'downloader/request_method_count/GET': 10,
+		'downloader/response_bytes': 478731,
+		'downloader/response_count': 10,
+		'downloader/response_status_count/200': 10,
+		'dupefilter/filtered': 1,
+		'finish_reason': 'finished',
+		'finish_time': datetime.datetime(2017, 3, 14, 9, 9, 46, 734378),
+		'item_scraped_count': 10,
+		'log_count/DEBUG': 22,
+		'log_count/INFO': 7,
+		'request_depth_max': 10,
+		'response_received_count': 10,
+		'scheduler/dequeued': 10,
+		'scheduler/dequeued/memory': 10,
+		'scheduler/enqueued': 10,
+		'scheduler/enqueued/memory': 10,
+		'start_time': datetime.datetime(2017, 3, 14, 9, 9, 37, 314201)}
+		
+		
+* `python 3.5.2` : 
+
+		'downloader/request_bytes': 3652,
+		'downloader/request_count': 10,
+		'downloader/request_method_count/GET': 10,
+		'downloader/response_bytes': 470069,
+		'downloader/response_count': 10,
+		'downloader/response_status_count/200': 10,
+		'dupefilter/filtered': 1,
+		'finish_reason': 'finished',
+		'finish_time': datetime.datetime(2017, 3, 14, 9, 9, 31, 486471),
+		'item_scraped_count': 10,
+		'log_count/DEBUG': 22,
+		'log_count/INFO': 7,
+		'request_depth_max': 10,
+		'response_received_count': 10,
+		'scheduler/dequeued': 10,
+		'scheduler/dequeued/memory': 10,
+		'scheduler/enqueued': 10,
+		'scheduler/enqueued/memory': 10,
+		'start_time': datetime.datetime(2017, 3, 14, 9, 9, 18, 808820)}
+		
+The values for `'finish_time' - 'start-time'` are as follows :-
+
+* `python 2.7` : 9.420177 sec
+* `python 3.5.2` : 12.677651 sec
+
+Hence, python3 is a little slower than python2 for the spider.
+
+	
