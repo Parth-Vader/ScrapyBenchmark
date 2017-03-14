@@ -20,6 +20,7 @@ After doing `scrapy runspider benchnew.py`, the logstats are as follows :
 
 
 Important stats : 
+
 		'downloader/request_bytes': 1740150,
 		'downloader/request_count': 2764,
 		'downloader/request_method_count/GET': 2764,
@@ -32,6 +33,7 @@ Important stats :
 		'dupefilter/filtered': 732,
 
 This is in contrast with `scrapy bench` : 
+
 		'downloader/request_bytes': 239399,
 		'downloader/request_count': 774,
 		'downloader/request_method_count/GET': 774,
