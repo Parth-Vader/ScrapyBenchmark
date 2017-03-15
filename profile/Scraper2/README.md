@@ -29,4 +29,4 @@ Shows the total time usage by each function
 
 Shows the cumulative time usage by each function
 
-![Cumtime](https://github.com/Parth-Vader/ScrapyBenchmark/blob/master/profile/Scraper2/images/tottime.png?raw=true "Shows the cumulative time usage by each function")
+![Cumtime](https://github.com/Parth-Vader/ScrapyBenchmark/blob/master/profile/Scraper2/images/cumtime.png?raw=true "Shows the cumulative time usage by each function")
