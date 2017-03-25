@@ -1,0 +1,7 @@
+projects:
+  default: 75588
+stacks:
+  default: scrapy:1.1
+version: GIT
+
+requirements_file: broad.txt
